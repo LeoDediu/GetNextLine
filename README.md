@@ -1,13 +1,40 @@
 # GetNextLine
 
 GetNextLine is a C function that reads any valid file and retrieves every line available.
+
+`int get_next_line(const int fd, char **line);`
+
 Functions allowed: read(), malloc() and free().
 
-## Usage:
-It is a function that reads a file and allows you to read a line ending with a newline character from a file descriptor.
-When you call the function again on the same file, it grabs the next line. This project deals with memory allocation and when to free and allocate memory to prevent leaks.  
+## Usage
 
-## Return value:
-  return 1 when it read a line;  
-  return 0 when it finished reading a file;  
-  return -1 when an error occurs.  
+### Compiling
+
+Run the following commands:
+
+* To compile
+	- `make`
+* To remove objects:
+	- `make clean`
+* To remove objects and binary file (program):
+	- `make fclean`
+* To re-compile:
+	- `make re`
+
+### Executing
+
+To test the function, compile with main.c.
+
+`gcc main.c src/get_next_line.c`
+
+`./a.out tests/some_lines.txt`
+
+## Return values
+
+* Returns 1 when succesfully reads a line
+
+* Returns 0 when finished reading a file 
+
+* Returns -1 when an error occurs
+
+Open **get_next_line.en.pdf** for more information about the project.
